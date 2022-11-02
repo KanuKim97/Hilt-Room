@@ -1,34 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.MainActivity">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="1"
+    tools:context=".data.MainActivity" >
 
-    <com.google.android.material.appbar.AppBarLayout
+    <TextView
+        android:id="@+id/txtView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.RoomApplication.AppBarOverlay">
+        android:layout_height="0dp"
+        android:layout_weight="0.55"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.RoomApplication.PopupOverlay" />
+    <EditText
+        android:id="@+id/txtEdit_Email"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittxt_rounded_corner"
+        android:inputType="textEmailAddress"
+        android:hint="@string/e_mail"
+        android:gravity="center"
+        android:ems="10"
+        android:importantForAutofill="no"/>
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <EditText
+        android:id="@+id/txtEdit_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittxt_rounded_corner"
+        android:inputType="text"
+        android:hint="@string/first_name"
+        android:gravity="center"
+        android:ems="10"
+        android:importantForAutofill="no"/>
 
-    <include layout="@layout/content_main" />
+    <EditText
+        android:id="@+id/txtEdit_LastName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittxt_rounded_corner"
+        android:inputType="text"
+        android:hint="@string/last_name"
+        android:gravity="center"
+        android:ems="10"
+        android:importantForAutofill="no"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <EditText
+        android:id="@+id/txtEdit_shopID"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittxt_rounded_corner"
+        android:inputType="numberDecimal"
+        android:hint="@string/shop_id"
+        android:gravity="center"
+        android:ems="10"
+        android:importantForAutofill="no"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/Btn_InputTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:background="@drawable/btn_input"
+        android:padding="5dp"
+        android:text="@string/input"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

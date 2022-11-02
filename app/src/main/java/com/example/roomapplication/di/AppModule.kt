@@ -16,6 +16,7 @@ object AppModule {
     @Provides
     @Singleton
     fun createDBInstance(): AppDataBase {
+
         return Room.databaseBuilder(
             HiltAndroidApp.applicationContext(),
             AppDataBase::class.java,

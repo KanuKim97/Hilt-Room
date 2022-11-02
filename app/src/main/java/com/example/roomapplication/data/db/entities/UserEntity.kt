@@ -4,9 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "user_table")
 data class UserEntity (
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val uid: Int,
     @ColumnInfo(name= "eMail")
     val eMail: String,
