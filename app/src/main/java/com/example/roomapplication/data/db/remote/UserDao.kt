@@ -11,7 +11,7 @@ import com.example.roomapplication.data.db.entities.UserEntity
 @Dao
 interface UserDao {
     @Query("SELECT * FROM user_table ORDER BY uid ASC")
-    fun readAllData(): LiveData<List<UserEntity>>
+    suspend fun readAllData(): List<UserEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUserData(userEntity: UserEntity)

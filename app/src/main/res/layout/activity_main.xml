@@ -77,9 +77,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.08"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_input"
         android:padding="5dp"
         android:text="@string/input"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Btn_ShowAll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:background="@drawable/btn_input"
+        android:padding="5dp"
+        android:text="@string/show_all"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="18sp" />
